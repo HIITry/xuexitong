@@ -44,6 +44,8 @@ driver.set_window_size(1200, 700)
 log_button = driver.find_element_by_xpath('/html/body/div[2]/div[3]/div/a')
 log_button.click()
 
+locat = (By.XPATH, '//*[@id="un"]')
+WebDriverWait(driver, 20, 0.5).until(ec.presence_of_element_located(locat))
 student_num = driver.find_element_by_xpath('//*[@id="un"]')
 student_num.send_keys(student_id)
 student_pwd = driver.find_element_by_xpath('//*[@id="pd"]')
@@ -51,7 +53,7 @@ student_pwd.send_keys(password)
 
 # 显示等待 最多等待20s（max） 0.5s（频率）找到继续下一步  否则报出异常 nosuchelementexception
 # WebDriverWait(driver, 20, 0.5).until(lambda el: driver.find_element_by_xpath('//*[@id="index_login_btn"]'))
-locator_1 =(By.XPATH, '//*[@id="index_login_btn"]')
+locator_1 = (By.XPATH, '//*[@id="index_login_btn"]')
 WebDriverWait(driver, 20, 0.5).until(ec.presence_of_element_located(locator_1))
 log_button2 = driver.find_element_by_xpath('//*[@id="index_login_btn"]')
 log_button2.click()
@@ -67,6 +69,8 @@ currentWin = driver.current_window_handle
 handles = driver.window_handles
 driver.switch_to.window(handles[-1])
 
+locator2 = (By.XPATH, "//*[@id='zne_kc_icon']")
+WebDriverWait(driver, 20, 0.5).until(ec.presence_of_element_located(locator2))
 driver.find_element_by_xpath("//*[@id='zne_kc_icon']").click()
 # 定位到iframe
 iframe = driver.find_element_by_id("frame_content")
