@@ -1,8 +1,7 @@
 # xuexitong
 杭电hdu学习通刷章节次数
 
-本代码在chrome浏览器运行
-运行此代码需要selenium库和chromedriver
+本代码需要chrome浏览器、需要selenium库和chromedriver
 chromedriver版本为chrome的版本
 本代码用的版本是 87.0.4280.88
 通过下面的链接下载和你chrome版本相同的driver并放置于python.exe所在同级文件夹下
